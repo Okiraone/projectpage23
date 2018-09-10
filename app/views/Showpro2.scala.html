@@ -1,0 +1,43 @@
+@(pubg:Pubg)
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<br><br><br>
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<div class="jumbotron">
+    <h1 >All Products</h1>
+    <p>New Bag and Gun Choose the right style for your <mark style="background-color: red" >shopping style>> </mark></p>
+</div>
+<div class="container " >
+    <div class="row">
+        <div class="col-md-2" ></div>
+        <div class="col-md-4" >
+                <div class="panel panel-info" >
+                    <div class="panel-heading"><h4><b>สินค้า</b></h4></div>
+                    <div class="panel-body" >
+                        รหัสสินค้า : @pubg.getId()<br>
+                        ชื่อสินค้า : @pubg.getName()<br>
+                            ประเภทสินค้า : @pubg.getType()<br>
+                           ขนาดสินค้า : @pubg.getSize()<br>
+                           ราคาสินค้า : @pubg.getPrice()<br>
+                        จำนวนสินค้า : @pubg.getAmount() ชิ้น<br>
+
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-md-2" ></div>
+
+    </div>
+
+
+
+</div>
+
+
+

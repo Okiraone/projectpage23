@@ -1,0 +1,37 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                               controllers.Application.index()
+GET         /Pro                            controllers.Application.Pro()
+GET         /Promo                          controllers.Application.Promo()
+GET         /Showpro                        controllers.Application.Showpro()
+GET         /tet                            controllers.Application.tet()
+
+GET         /inputPro                       controllers.Application.inputPro()
+POST        /postPro                        controllers.Application.postPro()
+
+GET         /pubg_helper                    controllers.Application.pubg_form_helper()
+POST        /pubg_post_helper               controllers.Application.pubg_post_helper()
+
+GET         /pubg_helper_list               controllers.Application.pubg_helper_list()
+POST        /pubg_post_helper_list          controllers.Application.pubg_post_helper_list()
+
+GET         /Prog_helper_list               controllers.Application.Prog_helper_list()
+POST        /prog_post_helper_list          controllers.Application.prog_post_helper_list()
+
+GET         /showProList                    controllers.Application.showProList()
+GET         /showOne/:idpro                 controllers.Application.showOne(idpro:String)
+
+GET         /showCList                      controllers.Application.showCList()
+GET         /C_add_form                     controllers.Application.C_add_form()
+POST        /save                           controllers.Application.save()
+GET         /c/edit/:idpro                  controllers.Application.edit(idpro:String)
+PUT         /c/edit                         controllers.Application.update()
+DELETE      /c/delete/:idpro                controllers.Application.delete(idpro:String)
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

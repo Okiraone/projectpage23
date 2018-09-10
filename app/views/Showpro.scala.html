@@ -1,0 +1,121 @@
+@(p1:Product,p2:Product,p3:Product,p4:Product,p5:Product,p6:Product)
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<br><br><br>
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<div class="jumbotron">
+    <h1 >All Products</h1>
+    <p>New Bag and Gun Choose the right style for your <mark style="background-color: red" >shopping style>> </mark></p>
+</div>
+<div class="container " >
+    <div class="row">
+        <div class="col-md-2" ></div>
+        <div class="col-md-4" >
+                <div class="panel panel-info" >
+                    <div class="panel-heading"><h4><b>สินค้า @p1.getName()</b></h4></div>
+                    <div class="panel-body" >
+                        รหัสสินค้า : @p1.getId()<br>
+                        ชื่อสินค้า : @p1.getName()<br>
+                        ประเภทสินค้า : @p1.getType()<br>
+                        ราาคาต่อหน่วย : @p1.getPrice() บาท<br>
+                        จำนวนสินค้า : @p1.getAmount() ชิ้น<br>
+                        ขนาดสินค้า : @p1.getSize() <br><br>
+                        <img src="/assets/images/1.png" class="img-responsive">
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-4" >
+            <div class="panel panel-info" >
+                <div class="panel-heading"><h4><b>สินค้า @p2.getName()</b></h4></div>
+                <div class="panel-body" >
+                    รหัสสินค้า : @p2.getId()<br>
+                    ชื่อสินค้า : @p2.getName()<br>
+                    ประเภทสินค้า : @p2.getType()<br>
+                    ราาคาต่อหน่วย : @p2.getPrice() บาท<br>
+                    จำนวนสินค้า : @p2.getAmount() ชิ้น<br>
+                    ขนาดสินค้า : @p2.getSize() <br><br>
+                        <img src="/assets/images/2.png" class="img-responsive">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2" ></div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-2" ></div>
+        <div class="col-md-4" >
+            <div class="panel panel-info" >
+                <div class="panel-heading"><h4><b>สินค้า @p3.getName()</b></h4></div>
+                <div class="panel-body" >
+                    รหัสสินค้า : @p3.getId()<br>
+                    ชื่อสินค้า : @p3.getName()<br>
+                    ประเภทสินค้า : @p3.getType()<br>
+                    ราาคาต่อหน่วย : @p3.getPrice() บาท<br>
+                    จำนวนสินค้า : @p3.getAmount() ชิ้น<br>
+                    ขนาดสินค้า : @p3.getSize() <br><br>
+                        <img src="/assets/images/3.png" class="img-responsive">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" >
+            <div class="panel panel-primary" >
+                <div class="panel-heading"><h4><b>สินค้า @p4.getName()</b></h4></div>
+                <div class="panel-body" >
+                    รหัสสินค้า : @p4.getId()<br>
+                    ชื่อสินค้า : @p4.getName()<br>
+                    ประเภทสินค้า : @p4.getType()<br>
+                    ราาคาต่อหน่วย : @p4.getPrice() บาท<br>
+                    จำนวนสินค้า : @p4.getAmount() ชิ้น<br>
+                    ขนาดสินค้า : @p4.getSize() <br><br>
+                        <img src="/assets/images/001.jpg" width="240" height="240" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2" ></div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-2" ></div>
+        <div class="col-md-4" >
+            <div class="panel panel-primary" >
+                <div class="panel-heading"><h4><b>สินค้า @p5.getName()</b></h4></div>
+                <div class="panel-body" >
+                    รหัสสินค้า : @p5.getId()<br>
+                    ชื่อสินค้า : @p5.getName()<br>
+                    ประเภทสินค้า : @p5.getType()<br>
+                    ราาคาต่อหน่วย : @p5.getPrice() บาท<br>
+                    จำนวนสินค้า : @p5.getAmount() ชิ้น<br>
+                    ขนาดสินค้า : @p5.getSize() <br><br>
+                        <img src="/assets/images/002.jpg" width="240" height="240" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 " >
+            <div class="panel panel-primary" >
+                <div class="panel-heading"><h4><b>สินค้า @p6.getName()</b></h4></div>
+                <div class="panel-body" >
+                    รหัสสินค้า : @p6.getId()<br>
+                    ชื่อสินค้า : @p6.getName()<br>
+                    ประเภทสินค้า : @p6.getType()<br>
+                    ราาคาต่อหน่วย : @p6.getPrice() บาท<br>
+                    จำนวนสินค้า : @p6.getAmount() ชิ้น<br>
+                    ขนาดสินค้า : @p6.getSize() <br><br>
+                        <img src="/assets/images/003.jpg" alt="Nature" width="240" height="240" >
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

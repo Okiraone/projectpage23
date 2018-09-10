@@ -1,0 +1,77 @@
+@(pg:Prog)
+
+<br><br><br>
+<style>
+.button {
+    border-radius: 4px;
+    background-color: #e4b9b9;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+</style>
+<button class="button"><span><a href="/Prog_helper_list"> Add Product </a></span></button>
+
+    <div class="container " >
+        <div class="row">
+                <div class="col-md-2" ></div>
+                    <div class="col-md-8" >
+                        <div class="panel panel-info" >
+                            <div class="panel-heading"><h3><b>ข้อมูลสินค้า</b></h3></div>
+                                <div class="panel-body" >
+                                    รหัสสินค้า : @pg.getIdpro()<br>
+                                    ชื่อสินค้า : @pg.getName()<br>
+                                    ประเภทสินค้า : @pg.getType()<br>
+                                    ราาคาต่อหน่วย : @pg.getPrice() บาท<br>
+                                    จำนวนสินค้า : @pg.getAmount() ชิ้น<br>
+                                    ขนาดสินค้า : @pg.getSize()<br>
+                                        สี : @pg.getColor()<br>
+                                        ส่วนลด (%) : @pg.getSale() %<br>
+                                        ราคาสุทธิ : @pg.getNetPrice() <br>
+                                        รายละเอียดสินค้า : @pg.getDetail()<br>
+                                        ลายกระเป๋า : @pg.getPattern() <br><br>
+                                    <img src="/assets/images/pubg/@pg.getPic()" class="img-thumbnail" width="100px"height="100px">
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+

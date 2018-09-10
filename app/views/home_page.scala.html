@@ -1,0 +1,104 @@
+<br><br><br>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body
+#myBtn {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: red;
+color: white;
+cursor: pointer;
+padding: 15px;
+border-radius: 4px;
+}
+
+#myBtn:hover {
+background-color: #555;
+}
+</style>
+<body>
+    <div id="fb-root"></div>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+
+<div class="w3-content " style="max-width:1600px">
+
+
+    <div class="w3-container w3-center w3-padding-48 w3-white">
+        <h2><span class="w3-tag">PLAYERUNKNOWN'S</span></h2>
+        <h1 class="w3-xxxlarge"><b>BATTLEGROUNDS</b></h1>
+        <h6>Welcome to the blog of <span class="w3-tag">CookKai Shop</span></h6>
+    </div>
+
+            <!-- Image header -->
+    <div class="w3-display-container w3-wind " id="home">
+        <img src="/assets/images/05.jpg" width="1325" height="400" >
+        <div class="w3-display-right w3-padding-large"  >
+                            <h4 class="w3-jumbo w3-text-white w3-hide-small"><b>COOKKAI BLOG</b></h4>
+                            <h1 class="w3-text-white" >PLAY TODAY ON XBOX & PC</h1>
+                            <p><a href="https://store.steampowered.com/app/578080/agecheck"
+                            class="button"><img src="/assets/images/steam-183x52.png" ></a>&nbsp;
+                                <a href="https://www.xbox.com/en-US/games/playerunknowns-battlegrounds"
+                                class="button"><img src="/assets/images/xbox.png" ></a></p>
+        </div>
+    </div>
+</div>
+
+    <!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+    <h2>Portfolio</h2><br>
+    <h4>What we have created</h4>
+    <div class="row text-center slideanim">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="/assets/images/1.png" alt="Paris" width="200" height="100">
+                <p><strong>M416</strong></p>
+                <p>Yes, we built Paris</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="/assets/images/1.png" alt="New York" width="200" height="100">
+                <p><strong>M416</strong></p>
+                <p>We built New York</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="/assets/images/1.png" alt="San Francisco" width="200" height="100">
+                <p><strong>M416</strong></p>
+                <p>Yes, San Fran is ours</p>
+            </div>
+        </div>
+    </div><br>
+
+
+<br>
+<button type="button" class="btn btn-primary btn-lg "><a href="http://syzs.qq.com/en/" style="color:white">PUBG MOBILE</a></button>
+<h6>อัพเดทสินค้าใหม่<span class="label label-default">New</span></h6>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>

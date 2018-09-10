@@ -1,0 +1,25 @@
+@(cForm : Form[c])
+@import helper._;
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 ">
+            <h1>Create Product</h1>
+            @helper.form(action = routes.Application.save(),'class->"from-control",'enctype->"multipart/form-data"){
+                @inputText(cForm("name"),'_label -> "ชื่อสินค้า", 'size-> "40" , 'maxlength->"40", 'required->"requied")
+                @select(cForm("type"),options=Seq("กระเป๋า"->"กระเป๋า"),'_label->"ประเภทสินค้า")
+                @inputRadioGroup(cForm("size"),options = Seq("ใหญ่"->"ใหญ่","เล็ก"->"เล็ก"),'_label->"ขนาดสินค้า")
+                @select(cForm("color"),options=Seq("เขียว"->"เขียว","เขียวอ่อน"->"เขียวอ่อน","ดำ"->"ดำ"),'_label->"สี")
+                @inputText(cForm("price"),'_label -> "ราคา", 'size-> "10" )
+                @inputText(cForm("amount"),'_label -> "จำนวน", 'size-> "10" )
+                @inputText(cForm("sale"),'_label->"ส่วนลด(%)",'size->"10")
+                @textarea(cForm("detail"),'_label->"รายละเอียดสินค้า",'cols->"65",'row->"5")
+                @select(cForm("pattern"),options=Seq("ACU"->"ACU","Camo"->"Camo","Police black line"->"Police black line"),'_label->"ลายกระเป๋า")
+                @inputFile(cForm("pic"),'_label->"รูปสินค้า")
+                <input type="submit" value="บันทึก" class="btn btn-success" >
+                <input type="reset" value="ยกเลิก" class="btn btn-danger">
+            }
+        </div>
+    </div>
+</div>

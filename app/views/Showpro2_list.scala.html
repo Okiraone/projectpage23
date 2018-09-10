@@ -1,0 +1,59 @@
+@(pubgs:List[Pubg])
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<br><br><br>
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<div class="jumbotron">
+    <h1 >All Products [LIST]</h1>
+    <p>New Bag and Gun Choose the right style for your <mark style="background-color: red" >shopping style>> </mark></p>
+</div>
+<div class="container " >
+    <div class="row">
+        <div class="col-md-1" ></div>
+        <div class="col-md-10" >
+
+                        <table class="table table-bordered">
+                            <tr>
+                                <th> รหัสสินค้า </th>
+                                <th> ชื่อสินค้า </th>
+                                <th> ประเภทสินค้า </th>
+                                <th> ขนาดสินค้า </th>
+                                <th> ราคาสินค้า </th>
+                                <th> จำนวนสินค้า </th>
+
+                            </tr>
+                            @for(pg<-pubgs){
+                                <tr>
+                                    <td><a href="">@pg.getId()</td>
+                                    <td>@pg.getName()</td>
+                                    <td>@pg.getType()</td>
+                                    <td>@pg.getSize()</td>
+                                    <td>@pg.getPrice()</td>
+                                    <td>@pg.getAmount()</td>
+
+                                </tr>
+
+                            }
+
+                        </table>
+
+
+        </div>
+
+        <div class="col-md-1" ></div>
+
+    </div>
+
+
+
+</div>
+
+
+

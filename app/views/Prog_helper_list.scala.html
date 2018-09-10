@@ -1,0 +1,69 @@
+@(myForm:Form[Prog])
+
+@import helper._;
+
+<br>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    body {
+        position: relative;
+    }
+    #section1 {padding-top:50px;width: 100%;color:#0f0f0f ; background-color: #1E88E5;}
+    </style>
+
+        <div id="section1" class="container-fluid">
+            <div class="jumbotron">
+                <h1> Helper List Random </h1>
+                <p>NOT JUST A GAME, THIS IS BATTLE ROYALE PRODUCT:</p>
+            </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <table class="table table-bordered" style="width:60%"  >
+                            @helper.form(action = routes.Application.prog_post_helper_list(),'class->"from-control",'enctype->"multipart/form-data"){
+                                <tbody>
+                                    <tr>
+                                        <td style="background-color: #d9534f">@inputText(myForm("name"),'_label -> "ชื่อสินค้า", 'size-> "40" , 'maxlength->"40", 'required->"requied")</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #ffe7e2">@select(myForm("type"),options=Seq("กระเป๋า"->"กระเป๋า"),'_label->"ประเภทสินค้า")</td>
+                                <tr>
+                                    <td style="background-color: #d9534f">@inputRadioGroup(myForm("size"),options = Seq("ใหญ่"->"ใหญ่","เล็ก"->"เล็ก"),'_label->"ขนาดสินค้า")</td>
+                                </tr>
+                                    <tr>
+                                    <td style="background-color: #ffe7e2">@select(myForm("color"),options=Seq("เขียว"->"เขียว","เขียวอ่อน"->"เขียวอ่อน","ดำ"->"ดำ"),'_label->"สี")</td>
+                                </tr>
+                                    <tr>
+                                    <td style="background-color: #d9534f">@inputText(myForm("price"),'_label -> "ราคา", 'size-> "10" )</td>
+                                </tr>
+                                    <tr>
+                                        <td style="background-color: #ffe7e2">@inputText(myForm("amount"),'_label -> "จำนวน", 'size-> "10" )</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #d9534f">@inputText(myForm("sale"),'_label->"ส่วนลด(%)",'size->"10")</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #ffe7e2">@textarea(myForm("detail"),'_label->"รายละเอียดสินค้า",'cols->"65",'row->"5")</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #d9534f">@select(myForm("pattern"),options=Seq("ACU"->"ACU","Camo"->"Camo","Police black line"->"Police black line"),'_label->"ลายกระเป๋า")</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #ffe7e2">@inputFile(myForm("pic"),'_label->"รูปสินค้า")</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                                <input type="submit" value="บันทึก" class="btn btn-success" >
+                                <input type="reset" value="ยกเลิก" class="btn btn-danger" >
+                                }
+                            </div>
+                        </div>
+                    </div>
+            <br><br><br>
+        </div>
+
+

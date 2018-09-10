@@ -1,0 +1,87 @@
+@(progList:List[Prog])
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<br><br><br>
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+</style>
+
+<div class="jumbotron">
+    <h1 >All Products [LIST PIC]</h1>
+    <p>New Bag and Gun Choose the right style for your <mark style="background-color: red" >shopping style>> </mark></p>
+</div>
+
+    <div class="container " >
+        <div class="row">
+            <div class="col-md-12-"  >
+                <p align="right"><button class="button"><span><a href="/Prog_helper_list"> Add Product </a></span></button></p>
+            </div>
+                <div class="col-md-12" >
+                                <table class="table table-bordered">
+                                    <tr style="background-color: gainsboro">
+                                        <th> รหัสสินค้า </th>
+                                        <th> ชื่อสินค้า </th>
+                                        <th> สี </th>
+                                        <th> ราคาสินค้า </th>
+                                        <th> จำนวนสินค้า </th>
+                                        <th> ส่วนลด </th>
+
+                                    </tr>
+                                    @for(pg<-progList){
+                                        <tr>
+                                            <td>P<a href="/showOne/@pg.getIdpro()">@pg.getIdpro()</a></td>
+                                            <td>@pg.getName()</td>
+                                            <td>@pg.getColor()</td>
+                                            <td>@pg.getPrice()</td>
+                                            <td>@pg.getAmount()</td>
+                                            <td>@pg.getSale() %</td>
+                                        </tr>
+                                    }
+                                </table>
+                </div>
+        </div>
+    </div>
+<br><br><br><br><br>
